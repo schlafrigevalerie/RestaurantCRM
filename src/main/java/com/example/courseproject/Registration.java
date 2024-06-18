@@ -31,13 +31,13 @@ public class Registration implements Initializable {
             app.changeScene("regClient.fxml");
         }
         else if (role.equals("Официант")){
-            app.changeScene("regWaiter.fxml");
+            app.changeScene("regEmployee.fxml");
         }
         else if (role.equals("Повар")){
-            app.changeScene("regCook.fxml");
+            app.changeScene("regEmployee.fxml");
         }
         else if (role.equals("Администратор")){
-            app.changeScene("regAdmin.fxml");
+            app.changeScene("regEmployee.fxml");
         }
     }
     @Override

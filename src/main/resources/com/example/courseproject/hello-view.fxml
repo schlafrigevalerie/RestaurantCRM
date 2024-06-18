@@ -1,49 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.SubScene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="498.0" prefWidth="504.0" spacing="20.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-
-    <Label fx:id="welcomeText" />
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать в ИС ресторана &quot;Сугинами&quot;!">
-      <font>
-         <Font size="21.0" />
-      </font>
-   </Text>
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите свою роль и войдите в систему:">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Text>
-   <ChoiceBox prefWidth="150.0" style="-fx-background-color: white;" />
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Логин:" />
-   <TextField prefHeight="26.0" prefWidth="270.0" />
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль:" />
-   <TextField />
-    <Label fx:id="welcomeText2" />
-    <Button onAction="#onHelloButtonClick" prefHeight="35.0" prefWidth="158.0" style="-fx-background-color: white;" text="Авторизоваться">
-      <font>
-         <Font size="16.0" />
-      </font></Button>
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы? ">
-      <font>
-         <Font size="14.0" />
-      </font>
-   </Text>
-   <Hyperlink text="Зарегистрироватья">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Hyperlink>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.HelloController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <SubScene height="176.0" layoutX="20.0" layoutY="34.0" opacity="0.8" width="317.0">
+              <root>
+                <Region />
+              </root>
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </SubScene>
+            <Text fill="#100202" layoutX="4.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать в информационную систему ресторана" textAlignment="CENTER" wrappingWidth="352.9488525390625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fill="#941717" layoutX="54.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сугинами!" textAlignment="CENTER" wrappingWidth="252.85760498046875">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="317.0" fitWidth="360.0" layoutX="-2.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/Image/sushi.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="448.0" prefWidth="238.0" BorderPane.alignment="CENTER">
+         <children>
+            <SubScene height="18.0" layoutX="52.0" layoutY="99.0" opacity="0.8" width="200.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <SubScene height="40.0" layoutX="60.0" layoutY="14.0" opacity="0.8" width="184.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <Text layoutX="65.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите роль и войдите в систему" textAlignment="CENTER" wrappingWidth="174.15185546875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="roles" layoutX="77.0" layoutY="65.0" prefWidth="150.0" style="-fx-background-color: white;" />
+            <Text layoutX="90.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин (номер телефона)" />
+            <SubScene height="17.0" layoutX="52.0" layoutY="160.0" opacity="0.8" width="200.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <Text layoutX="131.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" />
+            <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="51.0" layoutY="125.0" prefHeight="26.0" prefWidth="202.0" promptText="Логин" />
+            <Button fx:id="button" layoutX="95.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#userLogin" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: white;" text="Авторизоваться" />
+            <SubScene height="34.0" layoutX="52.0" layoutY="298.0" opacity="0.8" width="200.0">
+              <root>
+                <Region />
+              </root>
+            </SubScene>
+            <Text layoutX="77.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы?" />
+            <Button layoutX="86.0" layoutY="346.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Зарегистрироваться!" />
+            <Label fx:id="wrongLogin" layoutX="28.0" layoutY="263.0" prefHeight="18.0" prefWidth="195.0" textAlignment="RIGHT" />
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="51.0" layoutY="186.0" prefHeight="26.0" prefWidth="202.0" promptText="Пароль" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

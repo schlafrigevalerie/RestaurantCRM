@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         //fxmlLoader.setLocation(HelloApplication.class.getResource("com/example/courseproject"));
         //Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Restaurant");
-        stage.setScene(new Scene(root,600,600));
+        stage.setScene(new Scene(root,650,450));
         stage.show();
     }
 

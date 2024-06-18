@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import org.w3c.dom.events.MouseEvent;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,6 +18,9 @@ public class HelloController implements Initializable{
     private ChoiceBox<String> roles;
 
     @FXML
+    private Button registration;
+
+    @FXML
     private Button button;
 
     @FXML
@@ -28,6 +31,8 @@ public class HelloController implements Initializable{
 
     @FXML
     private Label wrongLogin;
+
+    //private HelloApplication app;
 
     public void userLogin(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         HelloApplication app = new HelloApplication();
@@ -83,5 +88,10 @@ public class HelloController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         roles.getItems().addAll("Администратор", "Повар", "Официант", "Клиент");
+    }
+
+    public void registration(MouseEvent mouseEvent) throws IOException {
+        HelloApplication app = new HelloApplication();
+        app.changeScene("registration.fxml");
     }
 }

@@ -47,12 +47,12 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Text fill="#941717" layoutX="54.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сугинами!" textAlignment="CENTER" wrappingWidth="252.85760498046875">
+            <Text fill="#941717" layoutX="54.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Бенто&quot;!" textAlignment="CENTER" wrappingWidth="252.85760498046875">
                <font>
                   <Font size="46.0" />
                </font>
             </Text>
-            <ImageView fitHeight="317.0" fitWidth="360.0" layoutX="-2.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="317.0" fitWidth="360.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/Image/sushi.png" />
                </image>
@@ -94,7 +94,7 @@
               </root>
             </SubScene>
             <Text layoutX="77.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы?" />
-            <Button layoutX="86.0" layoutY="346.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Зарегистрироваться!" />
+            <Button fx:id="registration" layoutX="86.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#registration" style="-fx-background-color: white;" text="Зарегистрироваться!" />
             <Label fx:id="wrongLogin" layoutX="28.0" layoutY="263.0" prefHeight="18.0" prefWidth="195.0" textAlignment="RIGHT" />
             <PasswordField fx:id="password" alignment="CENTER" layoutX="51.0" layoutY="186.0" prefHeight="26.0" prefWidth="202.0" promptText="Пароль" />
          </children>

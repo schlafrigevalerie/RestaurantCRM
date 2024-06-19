@@ -2,11 +2,10 @@ package com.example.courseproject;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
 
-public class AfterLogin {
+public class Client {
     @FXML
     private Button logOut;
 

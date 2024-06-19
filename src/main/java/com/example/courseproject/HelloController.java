@@ -36,10 +36,22 @@ public class HelloController implements Initializable{
 
     public void userLogin(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         HelloApplication app = new HelloApplication();
-        if (phoneNumber.getText().toString().equals("89514190941") && password.getText().toString().equals("123")){
+        String role = roles.getSelectionModel().getSelectedItem();
+        if (phoneNumber.getText().toString().equals("client") && password.getText().toString().equals("123") && role.equals("Клиент")){
             wrongLogin.setText("Success!");
-
-            app.changeScene("afterLogin.fxml");
+            app.changeScene("client.fxml");
+        }
+        else if (phoneNumber.getText().toString().equals("waiter") && password.getText().toString().equals("123") && role.equals("Официант")){
+            wrongLogin.setText("Success!");
+            app.changeScene("waiter.fxml");
+        }
+        else if (phoneNumber.getText().toString().equals("cook") && password.getText().toString().equals("123") && role.equals("Повар")){
+            wrongLogin.setText("Success!");
+            app.changeScene("cook.fxml");
+        }
+        else if (phoneNumber.getText().toString().equals("admin") && password.getText().toString().equals("123") && role.equals("Администратор")){
+            wrongLogin.setText("Success!");
+            app.changeScene("admin");
         }
         else if(phoneNumber.getText().isEmpty() && password.getText().isEmpty()){
             wrongLogin.setText("Please enter your data");
@@ -76,7 +88,7 @@ public class HelloController implements Initializable{
 //        if (phoneNumber.getText().toString().equals("89514190941") && password.getText().toString().equals("123")){
 //            wrongLogin.setText("Success!");
 //
-//            //app.changeScene("afterLogin.fxml");
+//            //app.changeScene("client.fxml");
 //        }
 //        else if(phoneNumber.getText().isEmpty() && password.getText().isEmpty()){
 //            wrongLogin.setText("Please enter your data");

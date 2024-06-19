@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.SubScene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -10,49 +9,31 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #F1F8E8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.HelloController">
    <left>
-      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #95D2B3;" BorderPane.alignment="CENTER">
          <children>
-            <SubScene height="176.0" layoutX="20.0" layoutY="34.0" opacity="0.8" width="317.0">
-              <root>
-                <Region />
-              </root>
-               <fill>
-                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="1.0" green="1.0" blue="1.0" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </fill>
-            </SubScene>
-            <Text fill="#100202" layoutX="4.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать в информационную систему ресторана" textAlignment="CENTER" wrappingWidth="352.9488525390625">
+            <ImageView fitHeight="340.0" fitWidth="370.0" layoutX="1.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/Image/waves.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="16.0" layoutY="31.0" opacity="0.7" prefHeight="200.0" prefWidth="327.0" style="-fx-background-radius: 15px; -fx-background-color: white;" />
+            <Text fill="#100202" layoutX="4.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать в информационную систему ресторана" textAlignment="CENTER" wrappingWidth="352.9488525390625">
                <font>
                   <Font size="24.0" />
                </font>
             </Text>
-            <Text fill="#941717" layoutX="54.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Бенто&quot;!" textAlignment="CENTER" wrappingWidth="252.85760498046875">
+            <Text fill="#3a6388" layoutX="45.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="«Сигинари»!" textAlignment="CENTER" wrappingWidth="268.0576171875">
                <font>
                   <Font size="46.0" />
                </font>
             </Text>
-            <ImageView fitHeight="317.0" fitWidth="360.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="303.0" fitWidth="182.0" layoutX="110.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/Image/sushi.png" />
                </image>
@@ -61,42 +42,26 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="448.0" prefWidth="238.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="448.0" prefWidth="238.0" style="-fx-background-color: #F1F8E8;" BorderPane.alignment="CENTER">
          <children>
-            <SubScene height="18.0" layoutX="52.0" layoutY="99.0" opacity="0.8" width="200.0">
-              <root>
-                <Region />
-              </root>
-            </SubScene>
-            <SubScene height="40.0" layoutX="60.0" layoutY="14.0" opacity="0.8" width="184.0">
-              <root>
-                <Region />
-              </root>
-            </SubScene>
-            <Text layoutX="65.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите роль и войдите в систему" textAlignment="CENTER" wrappingWidth="174.15185546875">
+            <Pane layoutX="53.0" layoutY="336.0" prefHeight="34.0" prefWidth="204.0" style="-fx-background-color: #D8EFD3; -fx-background-radius: 15;" />
+            <Pane layoutX="53.0" layoutY="182.0" prefHeight="17.0" prefWidth="204.0" style="-fx-background-color: #D8EFD3; -fx-background-radius: 15;" />
+            <Pane layoutX="53.0" layoutY="119.0" prefHeight="17.0" prefWidth="204.0" style="-fx-background-color: #D8EFD3; -fx-background-radius: 15;" />
+            <Pane layoutX="53.0" layoutY="33.0" prefHeight="40.0" prefWidth="204.0" style="-fx-background-color: #D8EFD3; -fx-background-radius: 15;" />
+            <Text layoutX="78.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите роль и войдите в систему" textAlignment="CENTER" wrappingWidth="158.951904296875">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="roles" layoutX="77.0" layoutY="65.0" prefWidth="150.0" style="-fx-background-color: white;" />
-            <Text layoutX="90.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин (номер телефона)" />
-            <SubScene height="17.0" layoutX="52.0" layoutY="160.0" opacity="0.8" width="200.0">
-              <root>
-                <Region />
-              </root>
-            </SubScene>
-            <Text layoutX="131.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" />
-            <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="51.0" layoutY="125.0" prefHeight="26.0" prefWidth="202.0" promptText="Логин" />
-            <Button fx:id="button" layoutX="95.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#userLogin" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: white;" text="Авторизоваться" />
-            <SubScene height="34.0" layoutX="52.0" layoutY="298.0" opacity="0.8" width="200.0">
-              <root>
-                <Region />
-              </root>
-            </SubScene>
-            <Text layoutX="77.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы?" />
-            <Button fx:id="registration" layoutX="86.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#registration" style="-fx-background-color: white;" text="Зарегистрироваться!" />
+            <ChoiceBox fx:id="roles" layoutX="53.0" layoutY="83.0" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+            <Text layoutX="96.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин (номер телефона)" />
+            <Text layoutX="136.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" />
+            <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="53.0" layoutY="146.0" prefHeight="26.0" prefWidth="204.0" promptText="Логин" style="-fx-background-radius: 15;" />
+            <Button fx:id="button" layoutX="53.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#userLogin" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="Авторизоваться" />
+            <Text layoutX="80.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы?" />
+            <Button fx:id="registration" layoutX="53.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#registration" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="Зарегистрироваться!" />
             <Label fx:id="wrongLogin" layoutX="28.0" layoutY="263.0" prefHeight="18.0" prefWidth="195.0" textAlignment="RIGHT" />
-            <PasswordField fx:id="password" alignment="CENTER" layoutX="51.0" layoutY="186.0" prefHeight="26.0" prefWidth="202.0" promptText="Пароль" />
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="53.0" layoutY="209.0" prefHeight="26.0" prefWidth="204.0" promptText="Пароль" style="-fx-background-radius: 15;" />
          </children>
       </AnchorPane>
    </center>

@@ -1,0 +1,15 @@
+.my-button:hover {
+    -fx-background-color:  DDD;
+}
+.my-button{
+    -fx-background-color:   #55AD9B;
+}
+.my-button{
+    -fx-background-radius:  15;
+}
+.but{
+    -fx-background-color:  #95D2B3;
+}
+.but:hover {
+    -fx-background-color:  DDD;
+}

@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="340.0" fitWidth="370.0" layoutX="1.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/Image/waves.png" />
+                  <Image url="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/Image/waves.png" />
                </image>
             </ImageView>
             <Pane layoutX="16.0" layoutY="31.0" opacity="0.7" prefHeight="200.0" prefWidth="327.0" style="-fx-background-radius: 15px; -fx-background-color: white;" />
@@ -30,7 +30,7 @@
             </Text>
             <Text fill="#3a6388" layoutX="45.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="«Сигинари»!" textAlignment="CENTER" wrappingWidth="268.0576171875">
                <font>
-                  <Font size="46.0" />
+                  <Font name="Arial Narrow" size="46.0" />
                </font>
             </Text>
             <ImageView fitHeight="303.0" fitWidth="182.0" layoutX="110.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
@@ -53,15 +53,15 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="roles" layoutX="53.0" layoutY="83.0" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 15;" />
+            <ChoiceBox fx:id="roles" layoutX="53.0" layoutY="83.0" prefHeight="26.0" prefWidth="204.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
             <Text layoutX="96.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин (номер телефона)" />
             <Text layoutX="136.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" />
-            <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="53.0" layoutY="146.0" prefHeight="26.0" prefWidth="204.0" promptText="Логин" style="-fx-background-radius: 15;" />
-            <Button fx:id="button" layoutX="53.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#userLogin" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="Авторизоваться" />
+            <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="53.0" layoutY="144.0" prefHeight="26.0" prefWidth="204.0" promptText="Логин" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Button fx:id="button" layoutX="53.0" layoutY="245.0" mnemonicParsing="false" onMouseClicked="#userLogin" prefHeight="26.0" prefWidth="204.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Авторизоваться" />
             <Text layoutX="80.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ещё не зарегистрированы?" />
-            <Button fx:id="registration" layoutX="53.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#registration" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="Зарегистрироваться!" />
-            <Label fx:id="wrongLogin" layoutX="28.0" layoutY="263.0" prefHeight="18.0" prefWidth="195.0" textAlignment="RIGHT" />
-            <PasswordField fx:id="password" alignment="CENTER" layoutX="53.0" layoutY="209.0" prefHeight="26.0" prefWidth="204.0" promptText="Пароль" style="-fx-background-radius: 15;" />
+            <Button fx:id="registration" layoutX="53.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#registration" prefHeight="26.0" prefWidth="204.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Зарегистрироваться!" />
+            <Label fx:id="wrongLogin" layoutX="57.0" layoutY="294.0" prefHeight="18.0" prefWidth="195.0" textAlignment="RIGHT" textFill="#55ad9b" />
+            <PasswordField fx:id="password" alignment="CENTER" layoutX="53.0" layoutY="209.0" prefHeight="26.0" prefWidth="204.0" promptText="Пароль" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
          </children>
       </AnchorPane>
    </center>

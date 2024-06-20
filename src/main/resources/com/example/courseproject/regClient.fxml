@@ -10,71 +10,81 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.RegClient">
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="127.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация клиента" textAlignment="CENTER">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
             <Label layoutX="222.0" layoutY="74.0" prefHeight="18.0" prefWidth="155.0" textAlignment="CENTER" />
+            <Button fx:id="back" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" prefHeight="38.0" prefWidth="84.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="На главную" textAlignment="CENTER" />
+            <Label fx:id="wrongReg" alignment="CENTER" layoutX="246.0" layoutY="48.0" prefHeight="18.0" prefWidth="230.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="267.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="326.0" prefWidth="674.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="96.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+            <Text layoutX="331.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="67.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия">
+            <Text fx:id="addres" layoutX="336.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин" textAlignment="CENTER" wrappingWidth="44.6837158203125">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="9.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер телефона" textAlignment="RIGHT" wrappingWidth="115.08367919921875">
+            <Text layoutX="540.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНН">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="94.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНН">
+            <Text layoutX="336.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="76.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль">
+            <Text layoutX="300.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повторите пароль" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="17.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повторите пароль">
+            <TextField fx:id="name" layoutX="69.0" layoutY="77.0" prefHeight="26.0" prefWidth="167.0" style="-fx-background-radius: 15;" />
+            <TextField fx:id="surname" layoutX="275.0" layoutY="77.0" prefHeight="26.0" prefWidth="167.0" style="-fx-background-radius: 15;" />
+            <TextField fx:id="address" layoutX="146.0" layoutY="137.0" prefHeight="26.0" prefWidth="427.0" style="-fx-background-radius: 15;" />
+            <TextField fx:id="INN" layoutX="472.0" layoutY="77.0" prefHeight="26.0" prefWidth="167.0" style="-fx-background-radius: 15;" />
+            <PasswordField fx:id="password" layoutX="146.0" layoutY="227.0" prefHeight="26.0" prefWidth="427.0" style="-fx-background-radius: 15;" />
+            <PasswordField fx:id="password2" layoutX="146.0" layoutY="274.0" prefHeight="26.0" prefWidth="427.0" style="-fx-background-radius: 15;" />
+            <Text layoutX="139.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="140.0" layoutY="10.0" prefHeight="26.0" prefWidth="426.0" />
-            <TextField layoutX="140.0" layoutY="45.0" prefHeight="26.0" prefWidth="426.0" />
-            <TextField layoutX="140.0" layoutY="79.0" prefHeight="26.0" prefWidth="427.0" />
-            <TextField layoutX="140.0" layoutY="120.0" prefHeight="26.0" prefWidth="427.0" />
-            <PasswordField layoutX="140.0" layoutY="158.0" prefHeight="26.0" prefWidth="426.0" />
-            <PasswordField layoutX="141.0" layoutY="200.0" prefHeight="26.0" prefWidth="425.0" />
+            <Text layoutX="187.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация клиента" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <TextField fx:id="login" layoutX="146.0" layoutY="179.0" prefHeight="26.0" prefWidth="427.0" style="-fx-background-radius: 15;" />
+            <Text layoutX="340.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </left>
    <bottom>
       <AnchorPane prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <CheckBox layoutX="131.0" layoutY="4.0" mnemonicParsing="false" text="Согласен(а) на обработку персональных данных">
+            <CheckBox fx:id="processingOfPersonalData" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-radius: 15;" text="Согласен(а) на обработку персональных данных">
                <font>
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <Button layoutX="203.0" layoutY="32.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="193.0" text="Зарегистрироваться!" />
+            <Button fx:id="reg" layoutX="453.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#regClient" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #55AD9B; -fx-background-radius: 15;" text="Зарегистрироваться!" />
          </children>
       </AnchorPane>
    </bottom>

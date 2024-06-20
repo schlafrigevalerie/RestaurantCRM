@@ -1,0 +1,9 @@
+.my-box{
+    -fx-background-color: white;
+    -fx-border-radius: 15;
+    -fx-border-color: #55AD9B;
+    -fx-background-radius: 15;
+}
+.my-box: hover{
+    -fx-border-color:  #D8EFD3;
+}

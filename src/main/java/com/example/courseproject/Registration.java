@@ -22,6 +22,8 @@ public class Registration implements Initializable {
     @FXML
     private Label wrongRole;
 
+
+
     public void getRole(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         HelloApplication app = new HelloApplication();
         wrongRole.setText("Пожалуйста, выберите роль");
@@ -30,19 +32,13 @@ public class Registration implements Initializable {
         if (role.equals("Клиент")){
             app.changeScene("regClient.fxml");
         }
-        else if (role.equals("Официант")){
-            app.changeScene("regEmployee.fxml");
-        }
-        else if (role.equals("Повар")){
-            app.changeScene("regEmployee.fxml");
-        }
-        else if (role.equals("Администратор")){
+        else if (role.equals("Сотрудник")){
             app.changeScene("regEmployee.fxml");
         }
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        roles.getItems().addAll("Администратор", "Повар", "Официант", "Клиент");
+        roles.getItems().addAll("Сотрудник", "Клиент");
     }
 
     public void backToTheMainPage(MouseEvent mouseEvent) throws IOException {

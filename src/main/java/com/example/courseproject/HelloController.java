@@ -51,13 +51,13 @@ public class HelloController implements Initializable{
         }
         else if (phoneNumber.getText().toString().equals("admin") && password.getText().toString().equals("123") && role.equals("Администратор")){
             wrongLogin.setText("Success!");
-            app.changeScene("admin");
+            app.changeScene("admin.fxml");
         }
         else if(phoneNumber.getText().isEmpty() && password.getText().isEmpty()){
-            wrongLogin.setText("Please enter your data");
+            wrongLogin.setText("Пожалуйста, введите данные");
         }
         else{
-            wrongLogin.setText("Wrong number or password");
+            wrongLogin.setText("Данные введены неверно");
         }
     }
 
@@ -106,4 +106,6 @@ public class HelloController implements Initializable{
         HelloApplication app = new HelloApplication();
         app.changeScene("registration.fxml");
     }
+
+
 }

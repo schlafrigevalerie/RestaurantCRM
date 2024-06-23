@@ -25,13 +25,13 @@
                   </Text>
                </children>
             </Pane>
-            <Button fx:id="reg" layoutX="209.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#getRole" style="-fx-background-color: #F1F8E8; -fx-background-radius: 15;" text="Зарегистрироваться">
+            <Button fx:id="reg" layoutX="209.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#getRole" styleClass="whiteBut" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Зарегистрироваться">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <ChoiceBox fx:id="roles" layoutX="211.0" layoutY="108.0" prefHeight="42.0" prefWidth="252.0" style="-fx-background-color: #F1F8E8; -fx-background-radius: 15;" />
-            <Button fx:id="back" layoutX="268.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" style="-fx-background-color: #F1F8E8; -fx-background-radius: 15;" text="Вернуться на главную" />
+            <ChoiceBox fx:id="roles" layoutX="211.0" layoutY="108.0" prefHeight="42.0" prefWidth="252.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Button fx:id="back" layoutX="268.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" styleClass="whiteBut" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Вернуться на главную" />
             <Label fx:id="wrongRole" layoutX="203.0" layoutY="71.0" prefHeight="18.0" prefWidth="193.0" textFill="RED">
                <font>
                   <Font size="14.0" />

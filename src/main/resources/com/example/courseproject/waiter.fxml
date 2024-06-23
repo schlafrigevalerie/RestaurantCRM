@@ -18,7 +18,7 @@
                         <Font size="36.0" />
                      </font>
                   </Text>
-                  <Button fx:id="logOut" layoutX="182.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#userLogOut" styleClass="my-button" stylesheets="@../../../../java/cssStyle/ButtonStyle.css" text="Выйти" />
+                  <Button fx:id="logOut" layoutX="182.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#userLogOut" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Выйти" />
                   <Button fx:id="profileWaiter" layoutX="138.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#goToTheProfileWaiter" prefHeight="46.0" prefWidth="139.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Личный кабинет" />
                   <Button fx:id="menu" layoutX="138.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#goToTheMenu" prefHeight="46.0" prefWidth="139.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Меню" />
                   <Button fx:id="freeTables" layoutX="138.0" layoutY="137.0" mnemonicParsing="false" onMouseClicked="#goToTheTables" prefHeight="46.0" prefWidth="139.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Свободные столики" />

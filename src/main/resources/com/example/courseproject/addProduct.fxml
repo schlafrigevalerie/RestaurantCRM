@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.AddProduct">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D8EFD3;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="185.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить продукт" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="292.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="name" alignment="CENTER" layoutX="124.0" layoutY="152.0" prefHeight="27.0" prefWidth="425.0" promptText="Название" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text layoutX="245.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Единица измерения">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="units" layoutX="124.0" layoutY="239.0" prefHeight="27.0" prefWidth="425.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Text layoutX="283.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="quantity" alignment="CENTER" layoutX="123.0" layoutY="324.0" prefHeight="27.0" prefWidth="425.0" promptText="Количество на складе" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="295.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="44.0" prefWidth="81.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить" />
+            <Button fx:id="back" layoutX="46.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#backToTheStock" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+            <Label fx:id="changeProduct" alignment="CENTER" layoutX="121.0" layoutY="41.0" prefHeight="18.0" prefWidth="430.0" textAlignment="CENTER" textFill="#911010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -12,6 +12,6 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button fx:id="back" layoutX="256.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: white;" text="На главную" />
+      <Button fx:id="back" layoutX="235.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" prefHeight="80.0" prefWidth="202.0" styleClass="whiteBut" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="На главную" />
    </children>
 </AnchorPane>

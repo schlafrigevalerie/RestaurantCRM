@@ -13,3 +13,26 @@
 .but:hover {
     -fx-background-color:   #8ba9b7;
 }
+.butDel{
+    -fx-background-color:  #FA8072;
+}
+.butDel:hover {
+    -fx-background-color:   #8ba9b7;
+}
+.whiteBut{
+    -fx-background-color:  #FFFFFF;
+}
+.whiteBut:hover {
+    -fx-background-color:   #8ba9b7;
+}
+.whiteBut{
+    -fx-background-radius:  30;
+}
+.whiteBut{
+    -fx-border-color: #55AD9B;
+}
+.whiteBut{
+    -fx-border-radius: 30;
+}
+
+

@@ -62,7 +62,7 @@ public class ProfileEmployee implements Initializable {
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        app.changeScene("waiter.fxml");
+        app.changeScene(HelloController.getCurrentRole());
     }
 
     @FXML

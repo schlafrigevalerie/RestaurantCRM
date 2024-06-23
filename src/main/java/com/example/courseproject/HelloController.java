@@ -33,6 +33,7 @@ public class HelloController implements Initializable{
     @FXML
     private Label wrongLogin;
     private static String profileLogin;
+    private static String currentRole;
 
     //private HelloApplication app;
 
@@ -64,12 +65,15 @@ public class HelloController implements Initializable{
                             wrongLogin.setText("Такого аккаунта не существует");
                         } else if (role.equals("Официант")) {
                             wrongLogin.setText("Success!");
+                            currentRole = "waiter.fxml";
                             app.changeScene("waiter.fxml");
                         } else if (role.equals("Повар")) {
                             wrongLogin.setText("Success!");
+                            currentRole = "cook.fxml";
                             app.changeScene("cook.fxml");
                         } else {
                             wrongLogin.setText("Success!");
+                            currentRole = "admin.fxml";
                             app.changeScene("admin.fxml");
                         }
                     } else {
@@ -83,72 +87,14 @@ public class HelloController implements Initializable{
                 int count = resultClient.getInt(1);
                 if (count > 0) {
                     wrongLogin.setText("Success!");
+                    currentRole = "client.fxml";
                     app.changeScene("client.fxml");
                 }else{
                     wrongLogin.setText("Данные введены неверно");
                 }
             }
         }
-
-//            wrongLogin.setText("Success!");
-//            app.changeScene("client.fxml");
-//        }
-//        else if (phoneNumber.getText().toString().equals("waiter") && password.getText().toString().equals("123") && role.equals("Официант")){
-//            wrongLogin.setText("Success!");
-//            app.changeScene("waiter.fxml");
-//        }
-//        else if (phoneNumber.getText().toString().equals("cook") && password.getText().toString().equals("123") && role.equals("Повар")){
-//            wrongLogin.setText("Success!");
-//            app.changeScene("cook.fxml");
-//        }
-//        else if (phoneNumber.getText().toString().equals("admin") && password.getText().toString().equals("123") && role.equals("Администратор")){
-//            wrongLogin.setText("Success!");
-//            app.changeScene("admin.fxml");
-//        }
-//        else if(phoneNumber.getText().isEmpty() && password.getText().isEmpty()){
-//            wrongLogin.setText("Пожалуйста, введите данные");
-//        }
-//        else{
-//            wrongLogin.setText("Данные введены неверно");
-//        }
     }
-
-
-    //    private Button onHelloButtonClick;
-//    @FXML
-//    void getRole(MouseEvent event) {
-//        role.getItems().addAll("Администратор", "Повар", "Официант");
-//    }
-
-//    @FXML
-//    protected void onHelloButtonClick() {
-//        welcomeText.setText("Вы администратор!");
-////        onHelloButtonClick.setText("Вы кликнули!");
-//    }
-//
-//    @FXML
-//    protected void onHelloButtonClick2() {
-//        welcomeText2.setText("Вы официант!");
-////        onHelloButtonClick.setText("Вы кликнули!");
-//    }
-
-//    public void userLogin(ActionEvent event) throws IOException {
-//        checkLogin();
-//    }
-//    private void checkLogin() throws IOException{
-//        //HelloApplication app = new HelloApplication();
-//        if (phoneNumber.getText().toString().equals("89514190941") && password.getText().toString().equals("123")){
-//            wrongLogin.setText("Success!");
-//
-//            //app.changeScene("client.fxml");
-//        }
-//        else if(phoneNumber.getText().isEmpty() && password.getText().isEmpty()){
-//            wrongLogin.setText("Please enter your data");
-//        }
-//        else{
-//            wrongLogin.setText("Wrong number or password");
-//        }
-//    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         roles.getItems().addAll("Администратор", "Повар", "Официант", "Клиент");
@@ -160,5 +106,8 @@ public class HelloController implements Initializable{
     }
     public static String getLogin(){
         return profileLogin;
+    }
+    public static String getCurrentRole(){
+        return currentRole;
     }
 }

@@ -1,5 +1,5 @@
 .my-button:hover {
-    -fx-background-color:  DDD;
+    -fx-background-color:  #8ba9b7;
 }
 .my-button{
     -fx-background-color:   #55AD9B;
@@ -11,5 +11,5 @@
     -fx-background-color:  #95D2B3;
 }
 .but:hover {
-    -fx-background-color:  DDD;
+    -fx-background-color:   #8ba9b7;
 }

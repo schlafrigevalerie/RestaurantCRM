@@ -35,6 +35,7 @@ public class Programm {
                 System.out.println(", address = \"" + address + "\".");
             }
 
+
             // Закрываем ресурсы
             result.close();
             statement.close();

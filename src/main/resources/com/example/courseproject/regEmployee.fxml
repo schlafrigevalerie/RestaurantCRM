@@ -36,12 +36,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="305.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Text layoutX="133.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+            <Text layoutX="234.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО">
                <font>
                   <Font size="14.0" />
                </font>
@@ -66,8 +61,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <TextField fx:id="name" layoutX="63.0" layoutY="74.0" prefHeight="26.0" prefWidth="167.0" style="-fx-background-radius: 15;" />
-            <TextField fx:id="surname" layoutX="251.0" layoutY="74.0" prefHeight="26.0" prefWidth="169.0" style="-fx-background-radius: 15;" />
+            <TextField fx:id="name" layoutX="63.0" layoutY="74.0" prefHeight="26.0" prefWidth="373.0" style="-fx-background-radius: 15;" />
             <TextField fx:id="phoneNumber" layoutX="443.0" layoutY="74.0" prefHeight="26.0" prefWidth="167.0" style="-fx-background-radius: 15;" />
             <TextField fx:id="address" layoutX="126.0" layoutY="134.0" prefHeight="26.0" prefWidth="422.0" style="-fx-background-radius: 15;" />
             <PasswordField fx:id="password" layoutX="126.0" layoutY="222.0" prefHeight="26.0" prefWidth="421.0" style="-fx-background-radius: 15;" />

@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.ClientModel;
 import javafx.fxml.FXML;
 import javafx.scene.Cursor;
 import javafx.scene.control.*;
@@ -30,7 +31,6 @@ public class RegClient {
     private TextField address;
     @FXML
     private TextField login;
-    private Singleton s;
     @FXML
     void backToTheMainPage(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
@@ -39,28 +39,6 @@ public class RegClient {
 
     @FXML
     void regClient(MouseEvent event) throws IOException, ClassNotFoundException, SQLException {
-        wrongReg.setText("Проверьте заполненные поля");
-
-        //Class.forName("com.mysql.cj.jdbc.Driver");
-
-        // Создаем объект Statement для выполнения запросов к базе данных
-        Statement statement = Singleton.getInstance().getConnection().createStatement();
-
-        String queryCheck = String.format("SELECT COUNT(*) FROM clients WHERE login = '%s';",login.getText());
-        ResultSet result = statement.executeQuery(queryCheck);
-        if (!name.getText().isEmpty() && !login.getText().isEmpty() && !address.getText().isEmpty() && INN.getText().matches("^\\d{10}$|^\\d{12}$") && !password.getText().isEmpty() && !password2.getText().isEmpty() && processingOfPersonalData.isSelected()){
-            if (result.next()) {
-                int count = result.getInt(1);
-                if (count > 0) {
-                    wrongReg.setText("Такой логин существует");
-                } else {
-                    String query = String.format("INSERT INTO clients(name, address, individual_tax_number, passw, login) values ( '%s' , '%s' , '%s' , '%s' , '%s')", name.getText(), address.getText(), INN.getText(), password.getText(), login.getText());
-                    statement.executeUpdate(query);
-                    HelloApplication app = new HelloApplication();
-                    app.changeScene("successfulRegistration.fxml");
-                }
-            }
-        }
-        statement.close();
+        ClientModel.regClient(wrongReg, name, login, address, INN, password, password2, processingOfPersonalData);
     }
 }

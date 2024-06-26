@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.ClientModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -56,38 +57,8 @@ public class ProfileClient implements Initializable {
 
     @FXML
     void saveChanges(MouseEvent event) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM clients WHERE login = '" + HelloController.getLogin() + "';";
-            ResultSet result = statement.executeQuery(query);
-            if (result.next()){
-                if (!name.getText().isEmpty()){
-                    nameLabel.setText(name.getText());
-                    statement.executeUpdate("UPDATE clients SET name = '" + name.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                }
-                if  (!INN.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE clients SET individual_tax_number = '" + INN.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    innLabel.setText(INN.getText());
-                }
-                if (!address.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE clients SET address = '" + address.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    addressLabel.setText(address.getText());
-                }
-                if (!login.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE clients SET login = '" + login.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    loginLabel.setText(login.getText());
-                }
-                if (!password.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE clients SET passw = '" + password.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    passwordLabel.setText(password.getText());
-                }
-                else {
-                    noChanges.setText("Изменений нет");
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        //обращаемся к модели клиента
+       ClientModel.updateInfo(name, nameLabel, INN, innLabel, address, addressLabel, login, loginLabel, password, passwordLabel);
     }
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
@@ -97,22 +68,8 @@ public class ProfileClient implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM clients WHERE login = '" + HelloController.getLogin() + "';";
-            ResultSet result = statement.executeQuery(query);
-            if (result.next()){
-                nameLabel.setText(result.getString("name"));
-                addressLabel.setText(result.getString("address"));
-                innLabel.setText(result.getString("individual_tax_number"));
-                loginLabel.setText(result.getString("login"));
-                passwordLabel.setText(result.getString("passw"));
-            }
-            result.close();
-            statement.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        //обращаемся к модели клиента
+        ClientModel.findClient(nameLabel,addressLabel,innLabel,loginLabel,passwordLabel);
     }
 
 }

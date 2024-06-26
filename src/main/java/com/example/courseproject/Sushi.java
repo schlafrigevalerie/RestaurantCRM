@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.DishesModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -57,7 +59,7 @@ public class Sushi implements Initializable {
     }
     @FXML
     void addDishes(MouseEvent event) throws IOException {
-        if (HelloController.getCurrentRole().equals("admin.fxml")){
+        if (AuthorizationModel.getCurrentRole().equals("admin.fxml")){
             HelloApplication app = new HelloApplication();
             app.changeScene("addDishes.fxml");
         }
@@ -66,7 +68,7 @@ public class Sushi implements Initializable {
 
     @FXML
     void deleteDishes(MouseEvent event) throws IOException {
-        if (HelloController.getCurrentRole().equals("admin.fxml")){
+        if (AuthorizationModel.getCurrentRole().equals("admin.fxml")){
             HelloApplication app = new HelloApplication();
             app.changeScene("deleteDishes.fxml");
         }
@@ -77,9 +79,7 @@ public class Sushi implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT dishes.name, ingredients_dishes.quantity_in_the_dish, ingredients.name " +
-                    "FROM dishes INNER JOIN ingredients_dishes  ON dishes.id = ingredients_dishes.dishes_id " +
-                    "INNER JOIN ingredients ON ingredients_dishes.ing_id = ingredients.id WHERE dishes.category = 'суши и роллы'";
+            String query = DishesModel.findDishes("суши и роллы");
             ResultSet result = statement.executeQuery(query);
             String currentNameDish = "";
             String beforeNameDish = "";

@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.TablesModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -32,15 +33,7 @@ public class AddTable {
 
     @FXML
     void saveTable(MouseEvent event) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String updateDishes = "INSERT INTO restaurant_tables(capacity)" +
-                    "VALUES('" + capacityT.getText() + "');";
-            statement.executeUpdate(updateDishes);
-            change.setText("Стол добавлен");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        TablesModel.addTable(capacityT,change);
     }
 
 }

@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.ProductModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -34,53 +36,22 @@ public class ChangeQuantity implements Initializable {
     @FXML
     void backToTheStock(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        System.out.println(HelloController.getCurrentRole());
-        if (HelloController.getCurrentRole().equals("admin.fxml")) {
+        System.out.println(AuthorizationModel.getCurrentRole());
+        if (AuthorizationModel.getCurrentRole().equals("admin.fxml")) {
             app.changeScene("stockAdmin.fxml");
         }
-        if (HelloController.getCurrentRole().equals("cook.fxml")) {
+        if (AuthorizationModel.getCurrentRole().equals("cook.fxml")) {
             app.changeScene("stock.fxml");
         }
     }
 
     @FXML
     void saveChanges(MouseEvent event) {
-        String product = products.getSelectionModel().getSelectedItem();
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM ingredients WHERE name = '" + product  + "';";
-            ResultSet result = statement.executeQuery(query);
-            if (result.next()) {
-                int currentQuantity = result.getInt("quantity_in_stock");
-                if (Integer.parseInt(newQuantity.getText()) < currentQuantity){
-                    int newProductQuantity = result.getInt("quantity_in_stock") - Integer.parseInt(newQuantity.getText());
-                    String changeQuantity = "UPDATE ingredients SET quantity_in_stock = '" + newProductQuantity + "' WHERE name = '" + product + "';";
-                    statement.executeUpdate(changeQuantity);
-                    change.setText("Изменения сохранены");
-                }
-                if (Integer.parseInt(newQuantity.getText()) > currentQuantity){
-                    change.setText("Количество продуктов на складе меньше введённого числа");
-                }
-                if (newQuantity.getText().isEmpty()){
-                    change.setText("Введите число");
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        ProductModel.changeQuantity(products,newQuantity,change);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM ingredients";
-            ResultSet result = statement.executeQuery(query);
-            while (result.next()) {
-                products.getItems().add(result.getString("name"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        ProductModel.findIngredients(products);
     }
 }

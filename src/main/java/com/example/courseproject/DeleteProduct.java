@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.ProductModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -35,31 +36,11 @@ public class DeleteProduct implements Initializable {
 
     @FXML
     void deleteProduct(MouseEvent event) {
-        String name = names.getSelectionModel().getSelectedItem();
-        changeProduct.setText("Выберите продукт для удаления");
-        try {
-            if (!name.isEmpty()){
-                Statement statement = Singleton.getInstance().getConnection().createStatement();
-                String query = "DELETE FROM ingredients WHERE name = '" + name + "';";
-                statement.executeUpdate(query);
-                changeProduct.setText("Продукт удалён");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        ProductModel.deleteProduct(names,changeProduct);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM ingredients";
-            ResultSet result = statement.executeQuery(query);
-            while (result.next()) {
-                names.getItems().add(result.getString("name"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        ProductModel.findProduct(names);
     }
 }

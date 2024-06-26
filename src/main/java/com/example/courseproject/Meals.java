@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.MealsModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
@@ -50,13 +52,13 @@ public class Meals implements Initializable {
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        app.changeScene(HelloController.getCurrentRole());
+        app.changeScene(AuthorizationModel.getCurrentRole());
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT date_of_meals, start_time, end_time, orders_id, tables_id FROM meals INNER JOIN orders_tables ON meals.ord_tbl_id = orders_tables.id";
+            String query = MealsModel.findMeals();
             ResultSet result = statement.executeQuery(query);
             while (result.next()) {
                 LocalDate d = result.getDate("date_of_meals").toLocalDate();

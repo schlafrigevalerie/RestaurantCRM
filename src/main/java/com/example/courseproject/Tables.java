@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.TablesModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -47,7 +49,7 @@ public class Tables implements Initializable {
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        app.changeScene(HelloController.getCurrentRole());
+        app.changeScene(AuthorizationModel.getCurrentRole());
     }
 
     @FXML
@@ -60,7 +62,7 @@ public class Tables implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT restaurant_tables.id, restaurant_tables.capacity, meals.start_time, meals.end_time, meals.date_of_meals FROM restaurant_tables INNER JOIN orders_tables INNER JOIN meals ON orders_tables.id = meals.ord_tbl_id";
+            String query = TablesModel.findTables();
             ResultSet result = statement.executeQuery(query);
             int currentTable = 0;
             int beforeTable = 0;
@@ -95,18 +97,20 @@ public class Tables implements Initializable {
     }
     @FXML
     void addTable(MouseEvent event) throws IOException {
-        if (HelloController.getCurrentRole().equals("admin.fxml")){
+        admin.setText("Необходимо обладать правами администратора");
+        if (AuthorizationModel.getCurrentRole().equals("admin.fxml")){
             HelloApplication app = new HelloApplication();
             app.changeScene("addTable.fxml");
         }
-        admin.setText("Необходимо обладать правами администратора");
+
     }
     @FXML
     void deleteTable(MouseEvent event) throws IOException {
-        if (HelloController.getCurrentRole().equals("admin.fxml")){
+        admin.setText("Необходимо обладать правами администратора");
+        if (AuthorizationModel.getCurrentRole().equals("admin.fxml")){
             HelloApplication app = new HelloApplication();
             app.changeScene("deleteTable.fxml");
         }
-        admin.setText("Необходимо обладать правами администратора");
+
     }
 }

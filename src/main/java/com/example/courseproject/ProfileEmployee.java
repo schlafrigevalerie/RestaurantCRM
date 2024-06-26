@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.EmployeeModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -59,59 +61,17 @@ public class ProfileEmployee implements Initializable {
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        app.changeScene(HelloController.getCurrentRole());
+        app.changeScene(AuthorizationModel.getCurrentRole());
     }
 
     @FXML
-    void saveChanges(MouseEvent event) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM staff WHERE login = '" + HelloController.getLogin() + "';";
-            ResultSet result = statement.executeQuery(query);
-            if (result.next()){
-                if (!name.getText().isEmpty()){
-                    nameLabel.setText(name.getText());
-                    statement.executeUpdate("UPDATE staff SET name = '" + name.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                }
-                if  (!phoneNumber.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE staff SET individual_tax_number = '" + phoneNumber.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    phoneNumberLabel.setText(phoneNumber.getText());
-                }
-                if (!address.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE staff SET address = '" + address.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    addressLabel.setText(address.getText());
-                }
-                if (!login.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE staff SET login = '" + login.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    loginLabel.setText(login.getText());
-                }
-                if (!password.getText().isEmpty()){
-                    statement.executeUpdate("UPDATE staff SET passw = '" + password.getText() + "' WHERE login = '" + HelloController.getLogin() + "';");
-                    passwordLabel.setText(password.getText());
-                }
-                else {
-                    noChanges.setText("Изменений нет");
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    void saveChanges(MouseEvent event) throws SQLException {
+        EmployeeModel.updateInfo(name, nameLabel, phoneNumber, phoneNumberLabel, address, addressLabel, login, loginLabel, password, passwordLabel, noChanges);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM staff WHERE login = '" + HelloController.getLogin() + "';";
-            ResultSet result = statement.executeQuery(query);
-            if (result.next()){
-                nameLabel.setText(result.getString("name"));
-                addressLabel.setText(result.getString("address"));
-                phoneNumberLabel.setText(result.getString("phone_number"));
-                loginLabel.setText(result.getString("login"));
-                passwordLabel.setText(result.getString("passw"));
-            }
-            result.close();
-            statement.close();
+            EmployeeModel.findEmployee(nameLabel,addressLabel,phoneNumberLabel,loginLabel,passwordLabel);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

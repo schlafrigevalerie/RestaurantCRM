@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.DishesModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -47,30 +48,11 @@ public class DeleteDishes implements Initializable {
 
     @FXML
     void saveDishes(MouseEvent event) {
-        String nameDishes = dishes.getSelectionModel().getSelectedItem();
-        if (!nameDishes.isEmpty()){
-            try {
-                Statement statement = Singleton.getInstance().getConnection().createStatement();
-                String query = "DELETE FROM dishes WHERE name = '" + nameDishes + "';";
-                statement.executeUpdate(query);
-                deleteD.setText("Блюдо удалено");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        DishesModel.deleteDishes(dishes,deleteD);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String numberOrderQuery = "SELECT name FROM dishes WHERE category = '" + Menu.getCategory() + "';";
-            ResultSet result = statement.executeQuery(numberOrderQuery);
-            while (result.next()) {
-                dishes.getItems().add(result.getString("name"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        DishesModel.findOnCategory(dishes);
     }
 }

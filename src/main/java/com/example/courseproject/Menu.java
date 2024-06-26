@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -62,8 +63,9 @@ public class Menu {
     }
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
+        System.out.println(AuthorizationModel.getCurrentRole());
         HelloApplication app = new HelloApplication();
-        app.changeScene(HelloController.getCurrentRole());
+        app.changeScene(AuthorizationModel.getCurrentRole());
     }
 
     public static String getCategory() {

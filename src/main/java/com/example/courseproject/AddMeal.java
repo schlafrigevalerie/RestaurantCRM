@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.MealsModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -30,7 +31,6 @@ public class AddMeal implements Initializable {
 
     @FXML
     private ChoiceBox<Integer> numberTable;
-
     @FXML
     private Label change;
 
@@ -48,37 +48,11 @@ public class AddMeal implements Initializable {
 
     @FXML
     void saveChanges(MouseEvent event) {
-        int numberOrd = numberOrder.getSelectionModel().getSelectedItem();
-        int numberTab = numberTable.getSelectionModel().getSelectedItem();
-        LocalTime start = LocalTime.parse(startTime.getText());
-        LocalTime end = LocalTime.parse(endTime.getText());
-        LocalDate dateMeal = date.getValue();
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "INSERT INTO meals (date_of_meals, start_time, end_time, stf_rl_id,ord_tbl_id) VALUES('" + dateMeal + "','"+ start + "','" + end + "','" + numberOrd + "','" + numberTab + "');";
-            statement.executeUpdate(query);
-            change.setText("Продукт добавлен");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        MealsModel.addMeal(numberOrder, numberTable, startTime, endTime, date, change);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String numberOrderQuery = "SELECT id FROM orders";
-            ResultSet result = statement.executeQuery(numberOrderQuery);
-            while (result.next()) {
-                numberOrder.getItems().add(result.getInt("id"));
-            }
-            String numberTableQuery = "SELECT id FROM restaurant_tables";
-            ResultSet result2 = statement.executeQuery(numberTableQuery);
-            while (result2.next()) {
-                numberTable.getItems().add(result2.getInt("id"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        MealsModel.findOrder(numberOrder, numberTable);
     }
 }

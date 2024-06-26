@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.TablesModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -36,30 +37,10 @@ public class DeleteTable implements Initializable {
 
     @FXML
     void deleteT(MouseEvent event) {
-        int idTable = numTables.getSelectionModel().getSelectedItem();
-        if (idTable != 0){
-            try {
-                Statement statement = Singleton.getInstance().getConnection().createStatement();
-                String query = "DELETE FROM restaurant_tables WHERE id = '" + idTable + "';";
-                statement.executeUpdate(query);
-                change.setText("Столик удалён");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        TablesModel.deleteTable(numTables,change);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String numberOrderQuery = "SELECT id FROM restaurant_tables";
-            ResultSet result = statement.executeQuery(numberOrderQuery);
-            while (result.next()) {
-                numTables.getItems().add(result.getInt("id"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        TablesModel.findId(numTables);
     }
-
 }

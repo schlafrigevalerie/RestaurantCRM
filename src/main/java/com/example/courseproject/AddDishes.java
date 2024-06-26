@@ -1,5 +1,6 @@
 package com.example.courseproject;
 
+import Models.DishesModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -44,40 +45,12 @@ public class AddDishes implements Initializable {
 
     @FXML
     void addInList(MouseEvent event) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String nameIng = ingredients.getSelectionModel().getSelectedItem();
-            if (!quantity.getText().isEmpty()) {
-                ingredientsList.getItems().add(nameIng);
-                String query = "SELECT id FROM dishes WHERE name = '" + name.getText() + "';";
-                ResultSet res = statement.executeQuery(query);
-                if (res.next()){
-                    int idDish = res.getInt("id");
-                    String query2 = "SELECT id FROM ingredients WHERE name = '" + nameIng + "';";
-                    ResultSet res2 = statement.executeQuery(query2);
-                    if (res2.next()){
-                        int idIng = res2.getInt("id");
-                        String updateIngDish = "INSERT INTO ingredients_dishes(dishes_id,ing_id,quantity_in_the_dish)" +
-                                "VALUES('" + idDish + "','" + idIng +"','" + quantity.getText() + "');";
-                        statement.executeUpdate(updateIngDish);
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        DishesModel.addDishes(ingredients,quantity,ingredientsList,name);
     }
 
     @FXML
     void addInName(MouseEvent event) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String updateDishes = "INSERT INTO dishes(category,name)" +
-                    "VALUES('" + Menu.getCategory() + "','" + name.getText() + "');";
-            statement.executeUpdate(updateDishes);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        DishesModel.addNameInTable(name);
     }
 
     @FXML
@@ -106,15 +79,6 @@ public class AddDishes implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String numberOrderQuery = "SELECT name FROM ingredients";
-            ResultSet result = statement.executeQuery(numberOrderQuery);
-            while (result.next()) {
-                ingredients.getItems().add(result.getString("name"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        DishesModel.findIngredient(ingredients);
     }
 }

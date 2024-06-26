@@ -1,5 +1,7 @@
 package com.example.courseproject;
 
+import Models.AuthorizationModel;
+import Models.StockModels;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -39,7 +41,7 @@ public class Stock implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT * FROM ingredients";
+            String query = StockModels.findStock();
             ResultSet result = statement.executeQuery(query);
             while (result.next()) {
                 int q = result.getInt("quantity_in_stock");
@@ -61,7 +63,7 @@ public class Stock implements Initializable {
     @FXML
     void backToTheProfile(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
-        app.changeScene(HelloController.getCurrentRole());
+        app.changeScene(AuthorizationModel.getCurrentRole());
     }
 
     @FXML

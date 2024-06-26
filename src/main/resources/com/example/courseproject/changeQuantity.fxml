@@ -10,31 +10,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.ChangeQuantity">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.ChangeQuantity">
    <right>
-      <AnchorPane prefHeight="462.0" prefWidth="674.0" style="-fx-background-color: #D8EFD3;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #D8EFD3;" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="65.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменить количество продуктов" underline="true">
+            <Text layoutX="121.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменить количество продуктов" underline="true">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
-            <ChoiceBox fx:id="products" layoutX="64.0" layoutY="217.0" prefHeight="70.0" prefWidth="222.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <TextField fx:id="newQuantity" alignment="CENTER" layoutX="356.0" layoutY="225.0" prefHeight="54.0" prefWidth="245.0" promptText="Использованное количество" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <Button fx:id="save" layoutX="285.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="61.0" prefWidth="104.0" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить">
+            <ChoiceBox fx:id="products" layoutX="120.0" layoutY="269.0" prefHeight="70.0" prefWidth="222.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <TextField fx:id="newQuantity" alignment="CENTER" layoutX="412.0" layoutY="277.0" prefHeight="54.0" prefWidth="245.0" promptText="Использованное количество" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Button fx:id="save" layoutX="341.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="61.0" prefWidth="104.0" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить">
                <styleClass>
                   <String fx:value="my-button" />
                   <String fx:value="but" />
                </styleClass>
             </Button>
-            <Button fx:id="back" layoutX="40.0" layoutY="43.0" mnemonicParsing="false" onMouseClicked="#backToTheStock" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
-            <Text layoutX="107.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите продукт">
+            <Button fx:id="back" layoutX="30.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#backToTheStock" prefHeight="36.0" prefWidth="109.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+            <Text layoutX="163.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите продукт">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Text layoutX="320.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Укажите испльзованное количество количество" textAlignment="CENTER" wrappingWidth="304.3656005859375">
+            <Text layoutX="382.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Укажите использованное количество" textAlignment="CENTER" wrappingWidth="304.3656005859375">
                <font>
                   <Font size="16.0" />
                </font>

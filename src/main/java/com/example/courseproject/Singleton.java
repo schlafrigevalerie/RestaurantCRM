@@ -24,6 +24,13 @@ public class Singleton {
         }
         return INSTANCE;
     }
+    public void closeConnection(){
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public  Connection getConnection(){
         return connection;

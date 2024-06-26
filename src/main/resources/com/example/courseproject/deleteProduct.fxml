@@ -8,27 +8,26 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #D8EFD3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.DeleteProduct">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #D8EFD3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.DeleteProduct">
    <children>
-      <Text layoutX="200.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Удалить продукт" textAlignment="CENTER" underline="true">
+      <Text layoutX="263.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Удалить продукт" textAlignment="CENTER" underline="true">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="names" layoutX="225.0" layoutY="224.0" prefHeight="64.0" prefWidth="222.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <Text layoutX="219.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите продукт со склада">
+      <ChoiceBox fx:id="names" layoutX="288.0" layoutY="289.0" prefHeight="64.0" prefWidth="222.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Text layoutX="269.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите продукт со склада">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="delete" layoutX="271.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#deleteProduct" prefHeight="46.0" prefWidth="132.0" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Удалить продукт">
+      <Button fx:id="delete" layoutX="334.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#deleteProduct" prefHeight="46.0" prefWidth="132.0" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Удалить продукт">
          <styleClass>
             <String fx:value="but" />
             <String fx:value="butDel" />
          </styleClass>
       </Button>
-      <Button fx:id="back" layoutX="32.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#backToTheStock" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+      <Button fx:id="back" layoutX="38.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#backToTheStock" prefHeight="46.0" prefWidth="115.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
       <Label fx:id="changeProduct" alignment="CENTER" layoutX="123.0" layoutY="78.0" prefHeight="27.0" prefWidth="426.0" textAlignment="CENTER" textFill="#911010">
          <font>
             <Font size="18.0" />

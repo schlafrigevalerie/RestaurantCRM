@@ -7,20 +7,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Client">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Client">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #95D2B3;" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="107.0" layoutY="88.0" prefHeight="286.0" prefWidth="458.0" style="-fx-background-color: #F1F8E8; -fx-background-radius: 15; -fx-background-radius: 15;">
+            <Pane layoutX="113.0" layoutY="112.0" prefHeight="376.0" prefWidth="574.0" style="-fx-background-color: #F1F8E8; -fx-background-radius: 15; -fx-background-radius: 15;">
                <children>
-                  <Text layoutX="13.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать, клиент!" textAlignment="CENTER" wrappingWidth="431.73681640625">
+                  <Text layoutX="71.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добро пожаловать, клиент!" textAlignment="CENTER" wrappingWidth="431.73681640625">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Text>
-                  <Button fx:id="logOut" layoutX="186.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#userLogOut" prefHeight="40.0" prefWidth="86.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Выйти" />
-                  <Button fx:id="profile" layoutX="172.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#goToTheProfile" prefHeight="40.0" prefWidth="114.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Профиль" />
-                  <Button fx:id="menu" layoutX="172.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#goToTheMenu" prefHeight="40.0" prefWidth="114.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Меню" />
+                  <Button fx:id="logOut" layoutX="247.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#userLogOut" prefHeight="44.0" prefWidth="96.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Выйти" />
+                  <Button fx:id="profile" layoutX="230.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#goToTheProfile" prefHeight="50.0" prefWidth="130.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Профиль" />
+                  <Button fx:id="menu" layoutX="230.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#goToTheMenu" prefHeight="50.0" prefWidth="130.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Меню" />
                </children>
             </Pane>
          </children>

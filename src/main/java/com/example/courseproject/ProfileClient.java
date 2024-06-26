@@ -27,13 +27,8 @@ public class ProfileClient implements Initializable {
 
     @FXML
     private TextField address;
-
     @FXML
-    private Rectangle back;
-
-    @FXML
-    private Polygon back2;
-
+    private Button back;
     @FXML
     private TextField name;
 

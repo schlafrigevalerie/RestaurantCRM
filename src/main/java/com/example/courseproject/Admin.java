@@ -15,6 +15,9 @@ public class Admin {
     private Button logOut;
 
     @FXML
+    private Button meals;
+
+    @FXML
     private Button menu;
 
     @FXML
@@ -51,5 +54,10 @@ public class Admin {
     void userLogOut(MouseEvent event) throws IOException {
         HelloApplication app = new HelloApplication();
         app.changeScene("hello-view.fxml");
+    }
+    @FXML
+    void goToTheMeals(MouseEvent event) throws IOException {
+        HelloApplication app = new HelloApplication();
+        app.changeScene("meals.fxml");
     }
 }

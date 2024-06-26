@@ -8,21 +8,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Sushi">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Sushi">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F1F8E8;" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="219.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Суши и роллы" textAlignment="CENTER" underline="true">
+            <Text layoutX="282.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Суши и роллы" textAlignment="CENTER" underline="true">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
             <Button fx:id="back" layoutX="38.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#backToTheMenu" prefHeight="34.0" prefWidth="62.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
-            <TableView fx:id="sushi" layoutX="8.0" layoutY="136.0" prefHeight="319.0" prefWidth="658.0">
+            <TableView fx:id="sushi" layoutX="8.0" layoutY="136.0" prefHeight="456.0" prefWidth="786.0">
               <columns>
-                <TableColumn fx:id="name" prefWidth="192.79998779296875" text="Название" />
-                <TableColumn fx:id="ingredients" prefWidth="249.6000213623047" text="Ингредиенты" />
-                  <TableColumn fx:id="quantityInDishes" prefWidth="215.199951171875" text="Количество ингредиентов" />
+                <TableColumn fx:id="name" prefWidth="246.39996337890625" text="Название" />
+                <TableColumn fx:id="ingredients" prefWidth="322.4000244140625" text="Ингредиенты" />
+                  <TableColumn fx:id="quantityInDishes" prefWidth="217.60003662109375" text="Количество ингредиентов" />
               </columns>
             </TableView>
          </children></AnchorPane>

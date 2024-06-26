@@ -24,10 +24,7 @@ public class ProfileEmployee implements Initializable {
     private Label addressLabel;
 
     @FXML
-    private Rectangle back;
-
-    @FXML
-    private Polygon back2;
+    private Button back;
 
     @FXML
     private TextField login;

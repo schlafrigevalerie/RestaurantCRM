@@ -21,13 +21,16 @@ public class HelloApplication extends Application {
         //fxmlLoader.setLocation(HelloApplication.class.getResource("com/example/courseproject"));
         //Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Restaurant");
-        stage.setScene(new Scene(root,673,462));
+        stage.setScene(new Scene(root,800,600));
         stage.show();
     }
 
     public void changeScene(String fxml) throws IOException{
         Parent pane = FXMLLoader.load(getClass().getResource(fxml));
         stg.getScene().setRoot(pane);
+    }
+    public void stop(){
+        Singleton.getInstance().closeConnection();
     }
 
     public static void main(String[] args) {

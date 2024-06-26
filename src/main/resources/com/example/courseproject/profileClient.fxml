@@ -6,14 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Polygon?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.ProfileClient">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.ProfileClient">
    <children>
-      <Pane layoutX="48.0" layoutY="345.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
+      <Pane layoutX="128.0" layoutY="412.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль">
                <font>
@@ -23,7 +21,7 @@
             <Label fx:id="passwordLabel" layoutX="74.0" layoutY="7.0" prefHeight="17.0" prefWidth="269.0" />
          </children>
       </Pane>
-      <Pane layoutX="48.0" layoutY="257.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
+      <Pane layoutX="128.0" layoutY="324.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес">
                <font>
@@ -33,7 +31,7 @@
             <Label fx:id="addressLabel" layoutX="72.0" layoutY="7.0" prefHeight="17.0" prefWidth="269.0" />
          </children>
       </Pane>
-      <Pane layoutX="48.0" layoutY="211.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
+      <Pane layoutX="128.0" layoutY="278.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНН">
                <font>
@@ -43,7 +41,7 @@
             <Label fx:id="innLabel" layoutX="74.0" layoutY="7.0" prefHeight="17.0" prefWidth="269.0" />
          </children>
       </Pane>
-      <Pane layoutX="48.0" layoutY="162.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
+      <Pane layoutX="128.0" layoutY="229.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО">
                <font>
@@ -53,7 +51,7 @@
             <Label fx:id="nameLabel" layoutX="74.0" layoutY="7.0" prefHeight="17.0" prefWidth="269.0" />
          </children>
       </Pane>
-      <Pane layoutX="237.0" layoutY="78.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #55AD9B;">
+      <Pane layoutX="300.0" layoutY="126.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="8.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Личный кабинет">
                <font>
@@ -62,14 +60,12 @@
             </Text>
          </children>
       </Pane>
-      <Rectangle fx:id="back" arcHeight="5.0" arcWidth="5.0" fill="#55ad9b" height="21.0" layoutX="41.0" layoutY="48.0" onMouseClicked="#backToTheProfile" stroke="#55ad9b" strokeType="INSIDE" width="59.0" />
-      <Polygon fx:id="back2" fill="#55ad9b" layoutX="7.0" layoutY="96.0" onMouseClicked="#backToTheProfile" points="34.0, -10.400016784667969, 34.0, -64.60001373291016, 6.79998779296875, -39.20000457763672" stroke="#55ad9b" strokeType="INSIDE" />
-      <TextField fx:id="name" layoutX="395.0" layoutY="164.0" prefHeight="27.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <TextField fx:id="INN" layoutX="395.0" layoutY="213.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <TextField fx:id="address" layoutX="395.0" layoutY="259.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <PasswordField fx:id="password" layoutX="395.0" layoutY="347.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <Button fx:id="save" layoutX="281.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="47.0" prefWidth="109.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить!" />
-      <Pane layoutX="48.0" layoutY="299.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
+      <TextField fx:id="name" layoutX="475.0" layoutY="231.0" prefHeight="27.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <TextField fx:id="INN" layoutX="475.0" layoutY="280.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <TextField fx:id="address" layoutX="475.0" layoutY="326.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <PasswordField fx:id="password" layoutX="475.0" layoutY="414.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Button fx:id="save" layoutX="321.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="67.0" prefWidth="158.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить!" />
+      <Pane layoutX="128.0" layoutY="366.0" opacity="0.5" prefHeight="32.0" prefWidth="575.0" style="-fx-background-color: white; -fx-border-color: #55AD9B;">
          <children>
             <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин">
                <font>
@@ -79,8 +75,9 @@
             <Label fx:id="loginLabel" layoutX="74.0" layoutY="7.0" prefHeight="17.0" prefWidth="269.0" />
          </children>
       </Pane>
-      <TextField fx:id="login" layoutX="395.0" layoutY="301.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-      <Text layoutX="455.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменение данных" />
-      <Label fx:id="noChanges" layoutX="258.0" layoutY="135.0" prefHeight="18.0" prefWidth="157.0" textAlignment="CENTER" textFill="#8c1c1c" />
+      <TextField fx:id="login" layoutX="475.0" layoutY="368.0" prefHeight="26.0" prefWidth="226.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Text layoutX="535.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменение данных" />
+      <Label fx:id="noChanges" layoutX="321.0" layoutY="192.0" prefHeight="18.0" prefWidth="157.0" textAlignment="CENTER" textFill="#8c1c1c" />
+      <Button fx:id="back" layoutX="51.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#backToTheProfile" prefHeight="46.0" prefWidth="97.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
    </children>
 </AnchorPane>

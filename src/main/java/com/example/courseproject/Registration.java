@@ -28,7 +28,7 @@ public class Registration implements Initializable {
         HelloApplication app = new HelloApplication();
         wrongRole.setText("Пожалуйста, выберите роль");
         String role = roles.getSelectionModel().getSelectedItem();
-        System.out.println(role);
+        //System.out.println(role);
         if (role.equals("Клиент")){
             app.changeScene("regClient.fxml");
         }

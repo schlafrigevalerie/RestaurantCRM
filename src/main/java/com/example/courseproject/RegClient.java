@@ -62,6 +62,5 @@ public class RegClient {
             }
         }
         statement.close();
-        Singleton.getInstance().getConnection().close();
     }
 }

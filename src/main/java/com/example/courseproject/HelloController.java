@@ -61,7 +61,7 @@ public class HelloController implements Initializable{
                     ResultSet resultLog = statement.executeQuery(queryCheckLog);
                     if (resultLog.next()) {
                         int count1 = resultLog.getInt(1);
-                        if (count1 == 0) {
+                        if (count1 < 0) {
                             wrongLogin.setText("Такого аккаунта не существует");
                         } else if (role.equals("Официант")) {
                             wrongLogin.setText("Success!");

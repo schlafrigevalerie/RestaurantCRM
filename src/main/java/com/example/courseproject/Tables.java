@@ -4,10 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
@@ -21,9 +18,17 @@ import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 public class Tables implements Initializable {
+    @FXML
+    private Button delete;
+    @FXML
+    private Button add;
 
     @FXML
     private Button back;
+
+    @FXML
+    private Label admin;
+
 
     @FXML
     private TableColumn<Table, Integer> capacity;
@@ -55,10 +60,16 @@ public class Tables implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
-            String query = "SELECT restaurant_tables.id, restaurant_tables.capacity, meals.start_time, meals.end_time, meals.date_of_meals FROM restaurant_tables INNER JOIN orders_tables INNER JOIN meals ON restaurant_tables.id = orders_tables.tables_id";
+            String query = "SELECT restaurant_tables.id, restaurant_tables.capacity, meals.start_time, meals.end_time, meals.date_of_meals FROM restaurant_tables INNER JOIN orders_tables INNER JOIN meals ON orders_tables.id = meals.ord_tbl_id";
             ResultSet result = statement.executeQuery(query);
+            int currentTable = 0;
+            int beforeTable = 0;
             while (result.next()) {
                 int num = result.getInt("id");
+                currentTable = num;
+                if (beforeTable == currentTable){
+                    continue;
+                }
                 int cap = result.getInt("capacity");
                 if (LocalDate.now().compareTo(result.getDate("date_of_meals").toLocalDate()) == 0 && LocalTime.now().compareTo(result.getTime("start_time").toLocalTime()) < 0 && LocalTime.now().compareTo(result.getTime("end_time").toLocalTime()) > 0 ) {
                     setStatus = "Занят";
@@ -71,6 +82,7 @@ public class Tables implements Initializable {
                 status.setCellValueFactory(new PropertyValueFactory<Table,String>("status"));
 
                 tables.setItems(list);
+                beforeTable = currentTable;
             }
         }catch (SQLException e) {
             throw new RuntimeException(e);
@@ -80,5 +92,21 @@ public class Tables implements Initializable {
         status.setCellValueFactory(new PropertyValueFactory<Table, String>("status"));
 
         tables.setItems(list);
+    }
+    @FXML
+    void addTable(MouseEvent event) throws IOException {
+        if (HelloController.getCurrentRole().equals("admin.fxml")){
+            HelloApplication app = new HelloApplication();
+            app.changeScene("addTable.fxml");
+        }
+        admin.setText("Необходимо обладать правами администратора");
+    }
+    @FXML
+    void deleteTable(MouseEvent event) throws IOException {
+        if (HelloController.getCurrentRole().equals("admin.fxml")){
+            HelloApplication app = new HelloApplication();
+            app.changeScene("deleteTable.fxml");
+        }
+        admin.setText("Необходимо обладать правами администратора");
     }
 }

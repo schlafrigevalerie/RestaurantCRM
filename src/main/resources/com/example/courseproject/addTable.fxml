@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F1F8E8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.AddTable">
+   <children>
+      <Text layoutX="283.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить столик" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="388.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="339.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вместительность">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="capacityT" layoutX="326.0" layoutY="274.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Button fx:id="save" layoutX="349.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#saveTable" prefHeight="40.0" prefWidth="105.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить" />
+      <Button fx:id="back" layoutX="36.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#backToTheTable" prefHeight="29.0" prefWidth="89.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+      <Label fx:id="change" alignment="CENTER" layoutX="297.0" layoutY="100.0" prefHeight="18.0" prefWidth="202.0" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

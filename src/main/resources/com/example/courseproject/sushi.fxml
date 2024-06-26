@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Sushi">
-   <center>
+   <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F1F8E8;" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="282.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Суши и роллы" textAlignment="CENTER" underline="true">
@@ -25,6 +26,9 @@
                   <TableColumn fx:id="quantityInDishes" prefWidth="217.60003662109375" text="Количество ингредиентов" />
               </columns>
             </TableView>
+            <Button fx:id="delete" layoutX="654.0" layoutY="54.0" mnemonicParsing="false" onMouseClicked="#deleteDishes" prefHeight="26.0" prefWidth="129.0" styleClass="butDel" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Удалить блюдо" />
+            <Button fx:id="add" layoutX="654.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#addDishes" prefHeight="26.0" prefWidth="129.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Добавить блюдо" />
+            <Label fx:id="admin" alignment="CENTER" layoutX="229.0" layoutY="37.0" prefHeight="18.0" prefWidth="343.0" textAlignment="CENTER" />
          </children></AnchorPane>
-   </center>
+   </top>
 </BorderPane>

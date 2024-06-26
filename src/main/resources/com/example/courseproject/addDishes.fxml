@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F1F8E8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.AddDishes">
+   <children>
+      <Text layoutX="284.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить блюдо" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="back" layoutX="30.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#backToTheCat" prefHeight="40.0" prefWidth="83.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+      <TextField fx:id="name" alignment="CENTER" layoutX="325.0" layoutY="160.0" promptText="Название" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Text layoutX="339.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название блюда">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="ingredients" layoutX="98.0" layoutY="239.0" prefWidth="150.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <TextField fx:id="quantity" alignment="CENTER" layoutX="324.0" layoutY="239.0" promptText="Количество в блюде" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+      <Button fx:id="add" layoutX="569.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#addInList" prefHeight="26.0" prefWidth="151.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Добавить в список" />
+      <ListView fx:id="ingredientsList" layoutX="300.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="save" layoutX="345.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#saveDishes" prefHeight="48.0" prefWidth="110.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Сохранить" />
+      <Text layoutX="130.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ингредиент">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="323.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество в блюде">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="saveCh" alignment="CENTER" layoutX="284.0" layoutY="34.0" prefHeight="18.0" prefWidth="232.0" textAlignment="CENTER" />
+      <Button fx:id="addN" layoutX="569.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#addInName" prefHeight="26.0" prefWidth="151.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Добавить" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+package com.example.courseproject;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AddTable {
+
+    @FXML
+    private Button back;
+
+    @FXML
+    private TextField capacityT;
+
+    @FXML
+    private Label change;
+
+    @FXML
+    private Button save;
+
+    @FXML
+    void backToTheTable(MouseEvent event) throws IOException {
+        HelloApplication app = new HelloApplication();
+        app.changeScene("tables.fxml");
+    }
+
+    @FXML
+    void saveTable(MouseEvent event) {
+        try {
+            Statement statement = Singleton.getInstance().getConnection().createStatement();
+            String updateDishes = "INSERT INTO restaurant_tables(capacity)" +
+                    "VALUES('" + capacityT.getText() + "');";
+            statement.executeUpdate(updateDishes);
+            change.setText("Стол добавлен");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}

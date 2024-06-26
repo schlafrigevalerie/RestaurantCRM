@@ -37,7 +37,6 @@ public class Stock implements Initializable {
     ObservableList<Products> list = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         try{
             Statement statement = Singleton.getInstance().getConnection().createStatement();
             String query = "SELECT * FROM ingredients";

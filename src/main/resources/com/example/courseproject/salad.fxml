@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.courseproject.Salad"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Salad">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F1F8E8;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="340.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Салаты" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="back" layoutX="38.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#backToTheMenu" prefHeight="34.0" prefWidth="62.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Назад" />
+            <TableView fx:id="salads" layoutX="6.0" layoutY="130.0" prefHeight="456.0" prefWidth="786.0">
+               <columns>
+                  <TableColumn fx:id="name" prefWidth="246.39996337890625" text="Название" />
+                  <TableColumn fx:id="ingredients" prefWidth="322.4000244140625" text="Ингредиенты" />
+                  <TableColumn fx:id="quantityInDishes" prefWidth="217.60003662109375" text="Количество ингредиентов" />
+               </columns>
+            </TableView>
+            <Button fx:id="add" layoutX="656.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#addDishes" prefHeight="26.0" prefWidth="129.0" styleClass="but" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Добавить блюдо" />
+            <Button fx:id="delete" layoutX="656.0" layoutY="54.0" mnemonicParsing="false" onMouseClicked="#deleteDishes" prefHeight="26.0" prefWidth="129.0" styleClass="butDel" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Удалить блюдо" />
+            <Label fx:id="admin" alignment="CENTER" layoutX="233.0" layoutY="25.0" prefHeight="18.0" prefWidth="343.0" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -10,13 +10,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="673.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.RegClient">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #95D2B3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.RegClient">
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="222.0" layoutY="74.0" prefHeight="18.0" prefWidth="155.0" textAlignment="CENTER" />
-            <Button fx:id="back" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" prefHeight="38.0" prefWidth="84.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="На главную" textAlignment="CENTER" />
-            <Label fx:id="wrongReg" alignment="CENTER" layoutX="246.0" layoutY="48.0" prefHeight="18.0" prefWidth="230.0" textFill="RED">
+            <Button fx:id="back" layoutX="34.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#backToTheMainPage" prefHeight="51.0" prefWidth="110.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="На главную" textAlignment="CENTER" />
+            <Label fx:id="wrongReg" alignment="CENTER" layoutX="284.0" layoutY="61.0" prefHeight="18.0" prefWidth="230.0" textFill="RED">
                <font>
                   <Font size="16.0" />
                </font></Label>
@@ -24,45 +24,45 @@
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="326.0" prefWidth="674.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="489.0" prefWidth="794.0" BorderPane.alignment="CENTER">
          <children>
-            <Text fx:id="addres" layoutX="336.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин" textAlignment="CENTER" wrappingWidth="44.6837158203125">
+            <Text fx:id="addres" layoutX="379.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Логин" textAlignment="CENTER" wrappingWidth="44.6837158203125">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="540.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНН">
+            <Text layoutX="583.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНН">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="336.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" textAlignment="CENTER">
+            <Text layoutX="379.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="300.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повторите пароль" textAlignment="CENTER">
+            <Text layoutX="343.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Повторите пароль" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="name" layoutX="69.0" layoutY="77.0" prefHeight="26.0" prefWidth="396.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <TextField fx:id="address" layoutX="146.0" layoutY="137.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <TextField fx:id="INN" layoutX="472.0" layoutY="77.0" prefHeight="26.0" prefWidth="167.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <PasswordField fx:id="password" layoutX="146.0" layoutY="227.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <PasswordField fx:id="password2" layoutX="146.0" layoutY="274.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <Text layoutX="251.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО">
+            <TextField fx:id="name" layoutX="112.0" layoutY="116.0" prefHeight="26.0" prefWidth="396.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <TextField fx:id="address" layoutX="189.0" layoutY="176.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <TextField fx:id="INN" layoutX="515.0" layoutY="116.0" prefHeight="26.0" prefWidth="167.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <PasswordField fx:id="password" layoutX="189.0" layoutY="266.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <PasswordField fx:id="password2" layoutX="189.0" layoutY="313.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Text layoutX="294.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="187.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация клиента" textAlignment="CENTER">
+            <Text layoutX="230.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация клиента" textAlignment="CENTER">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
-            <TextField fx:id="login" layoutX="146.0" layoutY="179.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
-            <Text layoutX="340.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" textAlignment="CENTER">
+            <TextField fx:id="login" layoutX="189.0" layoutY="218.0" prefHeight="26.0" prefWidth="427.0" styleClass="my-box" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ChoiceBoxStyle.css" />
+            <Text layoutX="383.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <Button fx:id="reg" layoutX="453.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#regClient" prefHeight="26.0" prefWidth="193.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Зарегистрироваться!" />
+            <Button fx:id="reg" layoutX="533.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#regClient" prefHeight="34.0" prefWidth="242.0" styleClass="my-button" stylesheets="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/cssStyle/ButtonStyle.css" text="Зарегистрироваться!" />
          </children>
       </AnchorPane>
    </bottom>

@@ -17,7 +17,7 @@
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #95D2B3;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="340.0" fitWidth="370.0" layoutX="-1.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="340.0" fitWidth="370.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:/C:/Users/User/IdeaProjects/CourseProject/src/main/java/Image/waves.png" />
                </image>
